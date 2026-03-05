@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>$BETTY</title>
+
+    <style>
+        :root {
+            --bg: #000;
+            --box: #0c0c0c;
+            --accent: #ff4db8;
+            --soft: #ff9edc;
+            --border: #ff4db8;
+            --text: #fff;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .logo img {
+            width: 180px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--accent);
+            margin: 10px 0;
+        }
+
+        .tagline {
+            color: var(--soft);
+            font-size: 1.2rem;
+        }
+
+        .box {
+            background: var(--box);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .box h3 {
+            color: var(--accent);
+            margin-top: 0;
+            letter-spacing: 2px;
+        }
+
+        /* HOPE METER */
+
+        .meter {
+            height: 28px;
+            background: #111;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 15px;
+            border: 1px solid var(--border);
+        }
+
+        .meter-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #ff4db8, #ff9edc);
+            transition: width 1s;
+        }
+
+        .hope-number {
+            margin-top: 10px;
+            font-size: 1.6rem;
+            color: var(--accent);
+        }
+
+        /* BETTY ORB */
+
+        .orb {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 30px auto;
+            background: radial-gradient(circle, #ff9edc, #ff4db8);
+            box-shadow: 0 0 40px #ff4db8;
+            animation: orbPulse 3s infinite;
+        }
+
+        @keyframes orbPulse {
+
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 20px #ff4db8;
+            }
+
+            50% {
+                transform: scale(1.15);
+                box-shadow: 0 0 60px #ff9edc;
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px #ff4db8;
+            }
+
+        }
+
+        /* BUTTONS */
+
+        button {
+            border: 1px solid var(--accent);
+            background: transparent;
+            color: var(--accent);
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: .2s;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: var(--accent);
+            color: black;
+        }
+
+        button:active {
+            transform: scale(0.9);
+        }
+
+        /* COUNTER */
+
+        .counter {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-top: 10px;
+        }
+
+        /* FLOATING HEARTS */
+
+        .heart {
+            position: absolute;
+            color: #ff4db8;
+            font-size: 20px;
+            animation: floatUp 1.5s ease-out forwards;
+            pointer-events: none;
+        }
+
+        @keyframes floatUp {
+
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-80px) scale(1.5);
+            }
+
+        }
+
+        /* FLOATING BETTY */
+
+        .floating-betty {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 90px;
+            animation: bounce 3s infinite;
+        }
+
+        @keyframes bounce {
+
+            0% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-20px)
+            }
+
+            100% {
+                transform: translateY(0)
+            }
+
+        }
+
+        /* TWITTER */
+
+        .twitter {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #ff4db8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            font-size: 22px;
+            text-decoration: none;
+            box-shadow: 0 0 20px #ff4db8;
+        }
+
+        footer {
+            text-align: center;
+            opacity: .6;
+            margin-top: 60px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <div class="logo">
+                <img src="logo.jpg" alt="Betty logo">
+            </div>
+
+            <h1>$BETTY</h1>
+
+            <p class="tagline">
+                Even when the world is messy, Betty keeps smiling.
+            </p>
+
+            <p>
+                Wars rage. Crypto crashes. Wallets feel lighter.
+                But optimism is still the strongest currency.
+            </p>
+
+        </header>
+
+        <!-- BETTY VISION -->
+
+        <div class="box">
+
+            <h3>— BETTY'S VISION —</h3>
+
+            <p>
+                $BETTY is built on a simple belief: optimism spreads faster than fear.
+            </p>
+
+            <p>
+                Markets move in cycles. Memes rise and fall.
+                But hope — when shared — multiplies.
+            </p>
+
+            <p>
+                Betty represents the part of crypto that never dies:
+                builders, dreamers, meme creators, and people who
+                still believe tomorrow can be better than today.
+            </p>
+
+            <p>
+                Every smile, every meme, every moment of positivity
+                pushes the internet slightly closer to a brighter timeline.
+            </p>
+
+            <p style="color:#ff9edc">
+                Betty isn't just a token. Betty is a mood.
+            </p>
+
+        </div>
+
+        <!-- HOPE INDEX -->
+
+        <div class="box">
+
+            <h3>— GLOBAL HOPE INDEX —</h3>
+
+            <p>Betty measures something markets forgot: optimism.</p>
+
+            <div class="meter">
+                <div class="meter-fill" id="hopeBar"></div>
+            </div>
+
+            <div class="hope-number" id="hopeValue">
+                Scanning positivity...
+            </div>
+
+        </div>
+
+        <!-- BETTY ORB -->
+
+        <div class="box">
+
+            <h3>— BETTY MOOD ORB —</h3>
+
+            <p>The orb senses internet vibes and converts them into happiness.</p>
+
+            <div class="orb"></div>
+
+            <div id="moodText" style="text-align:center;font-family:monospace;">
+                Betty feels hopeful today.
+            </div>
+
+        </div>
+
+        <!-- SMILE GENERATOR -->
+
+        <div class="box">
+
+            <h3>— BETTY SMILE GENERATOR —</h3>
+
+            <p>
+                Spread optimism across the internet. Betty reacts to every smile.
+            </p>
+
+            <button onclick="addSmile()">Make Betty Smile</button>
+
+            <div class="counter" id="smileCount">0</div>
+
+            <div id="streak" style="font-family:monospace;margin-top:10px;"></div>
+
+            <div id="bettyReaction" style="margin-top:10px;color:#ff9edc;font-family:monospace;"></div>
+
+        </div>
+
+        <!-- WALLET RECOVERY -->
+
+        <div class="box">
+
+            <h3>— WALLET RECOVERY PROBABILITY —</h3>
+
+            <p>
+                Crypto might be down, but Betty believes in comebacks.
+            </p>
+
+            <button onclick="recover()">Check My Wallet Recovery Odds</button>
+
+            <div id="recoveryResult" style="margin-top:15px;font-family:monospace;"></div>
+
+        </div>
+
+        <footer>
+
+            $BETTY © 2026
+            Built on optimism.
+
+        </footer>
+
+    </div>
+
+    <a href="https://twitter.com/YOURACCOUNT" class="twitter" target="_blank">𝕏</a>
+
+    <script>
+
+        /* HOPE INDEX */
+
+        function updateHope() {
+
+            let value = Math.floor(Math.random() * 40) + 60
+
+            document.getElementById("hopeBar").style.width = value + "%"
+
+            document.getElementById("hopeValue").innerText = "HOPE LEVEL: " + value + "/100"
+
+        }
+
+        setInterval(updateHope, 2000)
+        updateHope()
+
+        /* MOODS */
+
+        const moods = [
+
+            "Betty senses positivity rising.",
+            "Someone just bought the dip.",
+            "Memes remain undefeated.",
+            "Builders still building.",
+            "Hope detected across the timeline.",
+            "Betty believes in tomorrow."
+
+        ]
+
+        function updateMood() {
+
+            let m = moods[Math.floor(Math.random() * moods.length)]
+
+            document.getElementById("moodText").innerText = m
+
+        }
+
+        setInterval(updateMood, 3000)
+
+        /* SMILES */
+
+        let smiles = localStorage.getItem("bettySmiles") || 0
+        let streak = 0
+
+        document.getElementById("smileCount").innerText = smiles
+
+        const reactions = [
+
+            "Betty giggled.",
+            "Hope levels rising.",
+            "The timeline just got brighter.",
+            "Betty approves this positivity.",
+            "A smile has been deployed.",
+            "Internet mood improved.",
+            "Betty is proud of you."
+
+        ]
+
+        function addSmile() {
+
+            smiles++
+            streak++
+
+            localStorage.setItem("bettySmiles", smiles)
+
+            document.getElementById("smileCount").innerText = smiles
+            document.getElementById("streak").innerText = "Smile streak: " + streak
+
+            let reaction = reactions[Math.floor(Math.random() * reactions.length)]
+
+            document.getElementById("bettyReaction").innerText = "> " + reaction
+
+            spawnHeart()
+
+        }
+
+        /* FLOATING HEART */
+
+        function spawnHeart() {
+
+            let heart = document.createElement("div")
+            heart.className = "heart"
+            heart.innerText = "❤"
+
+            heart.style.left = Math.random() * 80 + "%"
+
+            document.body.appendChild(heart)
+
+            setTimeout(() => {
+                heart.remove()
+            }, 1500)
+
+        }
+
+        /* WALLET RECOVERY */
+
+        function recover() {
+
+            let odds = Math.floor(Math.random() * 60) + 40
+
+            document.getElementById("recoveryResult").innerText =
+                "> Wallet recovery probability: " + odds + "%"
+
+        }
+
+    </script>
+
+</body>
+
+</html>
